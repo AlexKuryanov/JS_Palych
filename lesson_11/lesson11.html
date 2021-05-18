@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Lesson 11</title>
+</head>
+<body>
+  <script>
+    alert('Hello!');
+    let userName = prompt('What is your name?');
+    let friendsName = prompt('What is your friend"s name?');
+    let countOfUsersFruits = +prompt('How many fruits do you have?');
+    let countOfUsersFriendsFruits = +prompt('How many fruits does your friend have?');
+    let countOfFruits = countOfUsersFruits + countOfUsersFriendsFruits;
+    let result = `So, ${userName} and ${friendsName} have ${countOfFruits} fruits`;
+    alert(result);
+  </script>
+</body>
+</html>

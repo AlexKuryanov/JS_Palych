@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Lesson 15</title>
+</head>
+<body>
+  <script>
+//    1) вывести от 1 до 20
+/* for (let i = 0; i <= 20; i++) {
+  console.log(i);  
+} */
+
+// 2) от 20 до 1
+/* for (let i = 20; i >= 0; i--) {
+  console.log(i);  
+} */
+
+// 3) от 1 до 20, только четные
+/* for (let i = 0; i < 20; i+=2) {
+  console.log(i); 
+} */
+
+// 4) от 1 до 20, с шагом в 3
+/* for (let i = 0; i < 20; i+=3) {
+  console.log(i);  
+} */
+
+// 5) запрашивать ввод пользователя, пока он не напишет "хватит"
+/* let answer;
+while (answer !== 'enough') {
+  console.log(answer);
+  answer = prompt('Let tell a fairytail about white bull?');
+}
+alert('OK'); */
+
+// 6.1*) вывести в консоль числа в таком виде
+// 0
+// 000
+// 00000
+// 0000000
+/* for (let i = '0'; i.length <= 7; i+='00') {
+  console.log(i);  
+} */
+
+// 6.2*) Вывести пирамиду
+// ___0
+// __000
+// _00000
+// 0000000
+/* let str = '___';
+for (let i = '0'; i.length <= 7; i+='00') {
+  console.log(str + i);
+  str = str.slice(0, str.length-1);
+} */
+
+// 7*) вывести пирамиду чисел
+// ___1
+// __123
+// _12345
+// 1234567
+let str = '____';
+
+for (let i = '1'; i <= 7; i++) {
+  
+  console.log(str += i);
+  
+}
+
+// 8*) вывести пирамиду чисел
+// ___1
+// __121
+// _12321
+// 1234321 
+// 9*) Вывести все простые числа от 1 до 1000
+  </script>
+</body>
+</html>

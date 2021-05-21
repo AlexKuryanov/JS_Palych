@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Lesson 16 Functions</title>
+</head>
+<body>
+  <script>
+//     1) Создайте функцию которая выводит в консоль "Привет"
+function sayHi() {
+  console.log('Hello!');
+}
+sayHi();
+
+// 2) Создайте функцию которая возвращает число 7
+function getSeven() {
+  console.log(7);
+  return 7;
+}
+getSeven();
+
+// 3) Создайте функцию которая умножает 2 числа, переданных ей как параметры
+// --- пересмотрите урок ---
+function multiplayNumbers(a, b) {
+  return a * b;
+}
+let result_3 = multiplayNumbers(7, 5);
+console.log(result_3);
+
+// 4) Создайте функцию pow(2, 3) которая возводит первый аргумент в степень числа переданного вторым аргументом. В примере нужно 2 возвести в степень 3
+function powNumbers(x, n) {
+  return Math.pow(x, n)
+}
+let result_4 = powNumbers(5, 4)
+console.log(result_4);
+
+// 5) Создайте функцию, которой мы передаем знак строкой и 2 числа.
+// calc('+', 2, 3) или calc('*', 4, 8) и эта функция выполняет математическую операцию и возвращает ответ
+function calc(operator, num1, num2) {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+      break;
+    case '-':
+      return num1 - num2;
+      break;
+    case '*':
+      return num1 * num2;
+      break;
+    case '/':
+      return num1 / num2;
+      break;
+    default:
+      return console.log('Enter right operator');;
+  }
+}
+let result_5 = calc('+', 2, 3);
+console.log(result_5);
+
+// 6*) Создайте функцию которая выводит все простые числа в диапазоне от 1 до переданного числа
+
+function getPrimeNumbers(n) {
+      var x = [];
+    for (let i = 1; i < n; i++) {
+        x.push(i);
+    }
+    let p = 2;    
+    for (let j = p; j < n; j++) {          
+      for (let i = j; i < x.length; i++) {
+          if (x[i] % j === 0) {             
+             x.splice(i, 1);             
+          }         
+      }          
+       p++;
+    }   
+    x = x.join(' ');
+    return x;
+}
+let result_6 = getPrimeNumbers(27);
+console.log(result_6);
+  </script>
+  
+</body>
+</html>

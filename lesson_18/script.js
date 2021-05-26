@@ -97,10 +97,7 @@ console.log('function random: ', random(1, 5));
 
 console.log('Task 10:');
 // 10**) Создайте 100000 случайных целых чисел от 1 до 5 и посчитайте сколько раз выпало каждое число. Попробуйте ответить на вопрос почему и исправьте генерацию, что бы была равная вероятность.
-<<<<<<< Updated upstream
-=======
 // Из-за округления round - поменял на floor
->>>>>>> Stashed changes
 console.log(getHundredThousandRandomNumbers());
 console.log(countDuplicateOfRandomNumbers(getHundredThousandRandomNumbers()));
 

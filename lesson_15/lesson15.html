@@ -1,119 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Lesson 15</title>
 </head>
+
 <body>
   <script>
-  console.log();
-  console.log('Task 1:');
-//    1) вывести от 1 до 20
-for (let i = 0; i <= 20; i++) {
-  console.log(i);  
-}
-
-  console.log();
-  console.log('Task 2:');
-// 2) от 20 до 1
-for (let i = 20; i >= 0; i--) {
-  console.log(i);  
-}
-  console.log();
-  console.log('Task 3:');
-// 3) от 1 до 20, только четные
-for (let i = 0; i < 20; i+=2) {
-  console.log(i); 
-}
-  console.log();
-  console.log('Task 4:');
-// 4) от 1 до 20, с шагом в 3
-for (let i = 0; i < 20; i+=3) {
-  console.log(i);  
-}
-
-  console.log();
-  console.log('Task 5:');
-// 5) запрашивать ввод пользователя, пока он не напишет "хватит"
-/* let answer;
-while (answer !== 'enough') {
-  console.log(answer);
-  answer = prompt('Let tell a fairytail about white bull?');
-}
-alert('OK'); */
-
-
-  console.log();
-  console.log('Task 6.1:');
-// 6.1*) вывести в консоль числа в таком виде
-// 0
-// 000
-// 00000
-// 0000000
-for (let i = '0'; i.length <= 7; i+='00') {
-  console.log(i);  
-}
-console.log();
-console.log('Task 6.2:');
-// 6.2*) Вывести пирамиду
-// ___0
-// __000
-// _00000
-// 0000000
-let str1 = '___';
-for (let i = '0'; i.length <= 7; i+='00') {
-  console.log(str1 + i);
-  str1 = str1.slice(0, str1.length-1);
-}
-
-console.log();
-console.log('Task 7:');
-// 7*) вывести пирамиду чисел
-// ___1
-// __123
-// _12345
-// 1234567
-//
-let str = '___';
-for (let i = '1'; i <= '67'; ) {
-  console.log(str += i);
-  i = Number(i); 
-  i+=22;
-  str = str.replace(str[0], '');  
-}
-
-console.log();
-console.log('Task 8:');
-// 8*) вывести пирамиду чисел
-// ___1
-// __121
-// _12321
-// 1234321 
-
-console.log();
-console.log('Task 9:');
-// 9*) Вывести все простые числа от 1 до 1000
-console.log(getPrimeNumbers(1000));
-
-function getPrimeNumbers(n) {
-    var x = [];
-    for (let i = 2; i < n; i++) {
-        x.push(i);
+    console.log();
+    console.log('Task 1:');
+    //    1) вывести от 1 до 20
+    for (let i = 0; i <= 20; i++) {
+      console.log(i);
     }
-    let p = 2;    
-    for (let j = p; j < n; j++) {          
-      for (let i = j; i < x.length; i++) {
-          if (x[i] % j === 0) {             
-             x.splice(i, 1);             
-          }         
-      }          
-       p++;
-    }   
-    x = x.join(' ');
-    return x;
-}
+
+    console.log();
+    console.log('Task 2:');
+    // 2) от 20 до 1
+    for (let i = 20; i >= 0; i--) {
+      console.log(i);
+    }
+    console.log();
+    console.log('Task 3:');
+    // 3) от 1 до 20, только четные
+    for (let i = 0; i < 20; i += 2) {
+      console.log(i);
+    }
+    console.log();
+    console.log('Task 4:');
+    // 4) от 1 до 20, с шагом в 3
+    for (let i = 0; i < 20; i += 3) {
+      console.log(i);
+    }
+
+    console.log();
+    console.log('Task 5:');
+    // 5) запрашивать ввод пользователя, пока он не напишет "хватит"
+    /* let answer;
+    while (answer !== 'enough') {
+      console.log(answer);
+      answer = prompt('Let tell a fairytail about white bull?');
+    }
+    alert('OK'); */
+
+
+    console.log();
+    console.log('Task 6.1:');
+    // 6.1*) вывести в консоль числа в таком виде
+    // 0
+    // 000
+    // 00000
+    // 0000000
+    for (let i = '0'; i.length <= 7; i += '00') {
+      console.log(i);
+    }
+    console.log();
+    console.log('Task 6.2:');
+    // 6.2*) Вывести пирамиду
+    // ___0
+    // __000
+    // _00000
+    // 0000000
+    let str1 = '___';
+    for (let i = '0'; i.length <= 7; i += '00') {
+      console.log(str1 + i);
+      str1 = str1.slice(0, str1.length - 1);
+    }
+
+    console.log();
+    console.log('Task 7:');
+    // 7*) вывести пирамиду чисел
+    // ___1
+    // __123
+    // _12345
+    // 1234567
+    //
+    let str = '___';
+    for (let i = '1'; i <= '67';) {
+      console.log(str += i);
+      i = Number(i);
+      i += 22;
+      str = str.replace(str[0], '');
+    }
+
+    console.log();
+    console.log('Task 8:');
+    // 8*) вывести пирамиду чисел
+    // ___1
+    // __121
+    // _12321
+    // 1234321 
+    str = '___';
+    let i = 1;
+    let j = 3;
+    do {
+      str = str.slice(0, 3) + i;
+      i++;
+      if (i >= 1) {
+        let end = str.slice(j, 3);
+        let modend = end.split('').reverse().join('');
+        str = str + modend;
+        j--;
+      }
+      console.log(str);
+      str = str.replace('_', '');
+    } while (str.length < 7);
+
+    console.log();
+    console.log('Task 9:');
+    // 9*) Вывести все простые числа от 1 до 1000
+    console.log(getPrimeNumbers(1000));
+
+    function getPrimeNumbers(n) {
+      var x = [];
+      for (let i = 2; i < n; i++) {
+        x.push(i);
+      }
+      let p = 2;
+      for (let j = p; j < n; j++) {
+        for (let i = j; i < x.length; i++) {
+          if (x[i] % j === 0) {
+            x.splice(i, 1);
+          }
+        }
+        p++;
+      }
+      x = x.join(' ');
+      return x;
+    }
   </script>
 </body>
+
 </html>
